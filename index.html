@@ -14,36 +14,36 @@
 </head>
 <body>
   
+  <h1>Border-radius generator</h1>
+
   <div class="range">
-
-    <div class="top-left">
-
-      <input type="range" min="0" max="100" step="1" value="0"    
+    <input type="range" min="0" max="300" step="1" value="0"    
         id="top-left"
         oninput="document.getElementById('display-top-left').value=this.value"
-      >
-      <input type="number" value="0"
+    >
+    <input type="number" value="0"
         id="display-top-left"
         oninput="document.getElementById('top-left').value=this.value"
-      >
-    </div>
+    >
+  </div>
 
-    <div class="top-left">
+  <div class="top-left">
 
-      <input type="range" min="0" max="100" step="1" value="0"    
-        id="top-left-angle"
-        oninput="document.getElementById('display-top-left-angle').value=this.value"
-      >
-      <input type="number" value="0"
-        id="display-top-left-angle"
-        oninput="document.getElementById('top-left-angle').value=this.value"
-      >
-    </div>
+    <input type="range" min="0" max="200" step="1" value="0"    
+      id="top-left-angle"
+      oninput="document.getElementById('display-top-left-angle').value=this.value"
+    >
+    <input type="number" value="0"
+      id="display-top-left-angle"
+      oninput="document.getElementById('top-left-angle').value=this.value"
+    >
   </div>
 
 
   <div id="canvas" class="canvas"></div>
 
+  <div id="code-to-copy">border-radius: 0 px</div>
+  <button id="button" type=button onclick="copyCode()">Copy your code</button>
 
 
 
