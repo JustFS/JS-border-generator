@@ -14,40 +14,41 @@
 </head>
 <body>
   
-  <h1>Border-radius generator</h1>
+  <h1>Border-radius<br/>generator</h1>
 
   <div class="range">
-    <input type="range" min="0" max="300" step="1" value="0"    
-        id="top-left"
-        oninput="document.getElementById('display-top-left').value=this.value"
-    >
-    <input type="number" value="0"
-        id="display-top-left"
-        oninput="document.getElementById('top-left').value=this.value"
-    >
-  </div>
+    <div class="rangeBox">
+      <h5>Radius</h5>
+      <input type="range" min="0" max="300" step="1" value="0"    
+          id="radiusInput"
+          oninput="document.getElementById('radiusDisplay').value=this.value"
+      >
+      <input type="number" value="0"
+          id="radiusDisplay"
+          oninput="document.getElementById('radiusInput').value=this.value"
+      >
+    </div>
 
-  <div class="top-left">
-
-    <input type="range" min="0" max="200" step="1" value="0"    
-      id="top-left-angle"
-      oninput="document.getElementById('display-top-left-angle').value=this.value"
-    >
-    <input type="number" value="0"
-      id="display-top-left-angle"
-      oninput="document.getElementById('top-left-angle').value=this.value"
-    >
+    <div class="rangeBox">
+      <h5>Angle</h5>
+      <input type="range" min="0" max="400" step="1" value="0"    
+        id="angleInput"
+        oninput="document.getElementById('angleDisplay').value=this.value"
+      >
+      <input type="number" value="0"
+        id="angleDisplay"
+        oninput="document.getElementById('angleInput').value=this.value"
+      >
+    </div>
   </div>
 
 
   <div id="canvas" class="canvas"></div>
 
-  <div id="code-to-copy">border-radius: 0 px</div>
+  <input id="codeToCopy" value="border-radius: 0px;"></input><br/>
   <button id="button" type=button onclick="copyCode()">Copy your code</button>
 
 
-
-    
   <script src="./assets/jquery.min.js" type="text/javascript" ></script>
   <script src="./assets/bootstrap.js" type="text/javascript" ></script>
   <script src="./script.js" type="text/javascript" ></script>

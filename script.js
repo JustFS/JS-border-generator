@@ -1,50 +1,46 @@
 const canvas = document.getElementById('canvas');
-const codeToCopy = document.getElementById('code-to-copy');
+const codeToCopy = document.getElementById('codeToCopy');
 
-const topLeft = document.getElementById('top-left');
-const displayTopLeft = document.getElementById('display-top-left');
+// RADIUS BOX
+const radiusInput = document.getElementById('radiusInput');
+const radiusDisplay = document.getElementById('radiusDisplay');
 
-const topLeftAngle = document.getElementById('top-left-angle');
-const displayTopLeftAngle = document.getElementById('display-top-left-angle');
+// ANGLE BOX
+const angleInput = document.getElementById('angleInput');
+const angleDisplay = document.getElementById('angleDisplay');
 
-let leftRadius = 0;
-let leftAngleRadius = 0;
+let radius = 0;
+let angle = 0;
 
 
 function resultDisplay() {
 
-  if (leftAngleRadius > 0) {
-    canvas.style.borderRadius = leftAngleRadius + '% /' + leftRadius + 'px';
-    codeToCopy.innerHTML = `border-radius: ${leftAngleRadius}% / ${leftRadius} px;`;
+  if (angle === 0) {
+    canvas.style.borderRadius = radius + 'px';
+    codeToCopy.value = `border-radius: ${radius}px;`;
   } else {
-    canvas.style.borderRadius = leftRadius + 'px';
-    codeToCopy.innerHTML = `border-radius: ${leftRadius} px;`;
+    canvas.style.borderRadius = angle + '% /' + radius +'px';
+    codeToCopy.value = `border-radius: ${angle}% / ${radius}px;`;
   };
 };
 
 document.addEventListener('input', (e) => {
   switch (e.target) {
-    case topLeft:
-    case displayTopLeft:
-      leftRadius = e.target.value;
+    case radiusInput:
+    case radiusDisplay:
+      radius = e.target.value;
       break;
-    case topLeftAngle:
-    case displayTopLeftAngle:
-      leftAngleRadius = e.target.value;
+    case angleInput:
+    case angleDisplay:
+      angle = e.target.value;
       break;
-    }
-
+  }
   resultDisplay();	
 });
 
-// CODE TO COPY
-  const button = document.getElementById('button');
 
 function copyCode() {
   codeToCopy.select();
   document.execCommand('copy');
-  button.innerHTML = "Copied !";
-  setTimeout(() => {button.innerHTML = "Copy your code"}, 3500);
+  alert ('Copied !');
 };
-
-
