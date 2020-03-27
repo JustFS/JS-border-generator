@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-  <title>Bac à sable</title>
+  <title>Projet terminé</title>
 
   <link href="./style.css" rel="stylesheet">
   <!-- <link href="./assets/bootstrap.css" rel="stylesheet"> -->
@@ -20,24 +20,24 @@
     <div class="rangeBox">
       <h5>Radius</h5>
       <input type="range" min="0" max="300" step="1" value="0"    
-          id="radiusInput"
+          id="radiusRange"
           oninput="document.getElementById('radiusDisplay').value=this.value"
       >
       <input type="number" value="0"
           id="radiusDisplay"
-          oninput="document.getElementById('radiusInput').value=this.value"
+          oninput="document.getElementById('radiusRange').value=this.value"
       >
     </div>
 
     <div class="rangeBox">
       <h5>Angle</h5>
       <input type="range" min="0" max="400" step="1" value="0"    
-        id="angleInput"
+        id="angleRange"
         oninput="document.getElementById('angleDisplay').value=this.value"
       >
       <input type="number" value="0"
         id="angleDisplay"
-        oninput="document.getElementById('angleInput').value=this.value"
+        oninput="document.getElementById('angleRange').value=this.value"
       >
     </div>
   </div>
